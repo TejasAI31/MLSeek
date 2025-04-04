@@ -28,31 +28,31 @@ iii) Dropout2D<br>
 i) Stochastic<br>
 ii) Mini Batch<br>
 iii) Batch<br>
-
-# Optimizers:
-i) Momentum
-ii) RMSProp
-iii) Adam
-
-# Weight Initializers:
-i) Glorot
-ii) He
-
-# Regularizers:
-i) L1
-ii) L2
-iii) Elastic Net
-
-# LR Schedulers:
-i) Step LR
-ii) Multi Step LR
-iii) Constant_LR
-iV) Linear_LR
-v) Exponential_LR
-vi) Reduce_LR_On_Plateau
-
-# Speed:
-The Library has basic threading implemented to keep a decent level of speed.
-
+<br>
+# Optimizers:<br>
+i) Momentum<br>
+ii) RMSProp<br>
+iii) Adam<br>
+<br>
+# Weight Initializers:<br>
+i) Glorot<br>
+ii) He<br>
+<br>
+# Regularizers:<br>
+i) L1<br>
+ii) L2<br>
+iii) Elastic Net<br>
+<br>
+# LR Schedulers:<br>
+i) Step LR<br>
+ii) Multi Step LR<br>
+iii) Constant_LR<br>
+iV) Linear_LR<br>
+v) Exponential_LR<br>
+vi) Reduce_LR_On_Plateau<br>
+<br>
+# Speed:<br>
+The Library has basic threading implemented to keep a decent level of speed.<br>
+<br>
 ## Notes:
 The Library is in the very early stages of development. Work on the project has been in on-off stages over a period of 1 month currently (balancing college and other projects). A LOT of work is yet to be done.
