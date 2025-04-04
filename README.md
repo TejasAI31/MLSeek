@@ -4,8 +4,8 @@ Welcome to my Free and Open Source C++ Library, MLSeek.
 The main aim of MLSeek is to open up the previously gatekept domain of Machine Learning in C++.
 
 # *Why create a library?*
-Due to majority of the machine learning domain residing in the Python Ecosphere. There is a lack of easy to use Machine Learning Libraries in C++.<br>
-C++ being my language of choice, I found this surprising. Hence, what was initially meant to be a simple library for personal use, transformed into the currently ongoing project called MLSeek.<br>
+Due to majority of the machine learning domain residing in the Python Ecosphere, there is a lack of easy to use Machine Learning libraries in C++.<br>
+C++ being my language of choice, I found this fact surprising. Hence, what was initially meant to be a simple library for personal use, transformed into the currently ongoing project called MLSeek.<br>
 
 # CAPABILITIES:
 # 1- Layers:
