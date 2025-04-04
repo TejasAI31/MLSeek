@@ -7,7 +7,7 @@ The main aim of MLSeek is to open up the previously gatekept domain of Machine L
 Due to majority of the machine learning domain residing in the Python Ecosphere. There is a lack of easy to use Machine Learning Libraries in C++.
 C++ being my language of choice, I found this surprising. Hence, what was initially meant to be a simple library for personal use, transformed into the currently ongoing project called MLSeek.
 
-## CAPABILITIES:
+# CAPABILITIES:
 # 1- Layers:
 Dense:
 i) Sigmoid
