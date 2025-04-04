@@ -1,4 +1,4 @@
-## *MLSeek*
+## ***MLSeek***
 Welcome to my Free and Open Source C++ Library, MLSeek.
 
 The main aim of MLSeek is to open up the previously gatekept domain of Machine Learning in C++.
@@ -9,7 +9,7 @@ C++ being my language of choice, I found this surprising. Hence, what was initia
 
 # CAPABILITIES:
 # 1- Layers:
-Dense:
+Dense: <br>
 i) Sigmoid
 ii) Relu
 iii) Leaky Relu
