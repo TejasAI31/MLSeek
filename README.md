@@ -4,30 +4,30 @@ Welcome to my Free and Open Source C++ Library, MLSeek.
 The main aim of MLSeek is to open up the previously gatekept domain of Machine Learning in C++.
 
 # *Why create a library?*
-Due to majority of the machine learning domain residing in the Python Ecosphere. There is a lack of easy to use Machine Learning Libraries in C++.
-C++ being my language of choice, I found this surprising. Hence, what was initially meant to be a simple library for personal use, transformed into the currently ongoing project called MLSeek.
+Due to majority of the machine learning domain residing in the Python Ecosphere. There is a lack of easy to use Machine Learning Libraries in C++.<br>
+C++ being my language of choice, I found this surprising. Hence, what was initially meant to be a simple library for personal use, transformed into the currently ongoing project called MLSeek.<br>
 
 # CAPABILITIES:
 # 1- Layers:
 Dense: <br>
-i) Sigmoid
-ii) Relu
-iii) Leaky Relu
-iv) Tanh
-v) Linear
-vi) Input
-vii) Softmax
-viii)) Dropout1D
-
-Convolutional (Early Stages):
-i) Input2D
-ii) Conv2D
-iii) Dropout2D
-
-# Gradient Descent:
-i) Stochastic
-ii) Mini Batch
-iii) Batch
+i) Sigmoid <br>
+ii) Relu<br>
+iii) Leaky Relu<br>
+iv) Tanh<br>
+v) Linear<br>
+vi) Input<br>
+vii) Softmax<br>
+viii)) Dropout1D<br>
+<br>
+Convolutional (Early Stages):<br>
+i) Input2D<br>
+ii) Conv2D<br>
+iii) Dropout2D<br>
+<br>
+# Gradient Descent:<br>
+i) Stochastic<br>
+ii) Mini Batch<br>
+iii) Batch<br>
 
 # Optimizers:
 i) Momentum
