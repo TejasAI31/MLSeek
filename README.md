@@ -9,7 +9,7 @@ C++ being my language of choice, I found this fact surprising. Hence, what was i
 
 # CAPABILITIES:
 # 1- Layers:
-Dense: <br>
+**Dense**: <br>
 i) Sigmoid <br>
 ii) Relu<br>
 iii) Leaky Relu<br>
@@ -19,7 +19,7 @@ vi) Input<br>
 vii) Softmax<br>
 viii)) Dropout1D<br>
 <br>
-Convolutional (Early Stages):<br>
+**Convolutional** (Early Stages):<br>
 i) Input2D<br>
 ii) Conv2D<br>
 iii) Dropout2D<br>
