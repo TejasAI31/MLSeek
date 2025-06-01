@@ -1,4 +1,4 @@
-*![output-onlinepngtools (1)](https://github.com/user-attachments/assets/559918c6-233f-46ff-8610-ef439437d475)
+![output-onlinepngtools (1)](https://github.com/user-attachments/assets/559918c6-233f-46ff-8610-ef439437d475)
 **MLSeek**
 
 Welcome to my Free and Open Source C++ Library, MLSeek.
