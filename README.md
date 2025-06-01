@@ -1,4 +1,5 @@
-## ***MLSeek***
+## *![MLSeek](https://github.com/user-attachments/assets/a57f02b1-96fb-47df-a36a-b1057a6a7549)
+**MLSeek***
 Welcome to my Free and Open Source C++ Library, MLSeek.
 
 The main aim of MLSeek is to open up the previously gatekept domain of Machine Learning in C++.
