@@ -60,7 +60,7 @@ Layer::Layer(int kernalnumber, int size, int kerneldilation, int stridenum, std:
 	stride = stridenum;
 }
 
-Layer::Layer(double drop, std::string layertype)
+Layer::Layer(float drop, std::string layertype)
 {
 	if (!layertype.compare("Dropout"))type = Dropout;
 	else

@@ -2,9 +2,8 @@
 #include "model.h"
 #include <fstream>
 
-int testdatasize = 5000;
-
-void CreateMnistDataset(vector<vector<double>>* input, vector<vector<double>>* actual, int i)
+int testdatasize = 500;
+void CreateMnistDataset(vector<vector<float>>* input, vector<vector<float>>* actual, int i)
 {
 	if (i > 60000)
 	{
@@ -20,11 +19,11 @@ void CreateMnistDataset(vector<vector<double>>* input, vector<vector<double>>* a
 	for (int x = 0; x < i; x++)
 	{
 		vector<unsigned char> temp(28 * 28);
-		vector<double> sample;
+		vector<float> sample;
 		file.read((char*)(temp.data()), 28 * 28);
 		for (int i = 0; i < 28 * 28; i++)
 		{
-			sample.push_back((double)temp[i] / (double)255);
+			sample.push_back((float)temp[i] / (float)255);
 		}
 		input->push_back(sample);
 
@@ -41,8 +40,8 @@ void CreateMnistDataset(vector<vector<double>>* input, vector<vector<double>>* a
 		vector<unsigned char> temp(1);
 
 		file2.read((char*)(temp.data()), 1);
-		vector<double> label(10);
-		label[(double)temp[0]] = 1;
+		vector<float> label(10);
+		label[(float)temp[0]] = 1;
 
 		actual->push_back(label);
 	}
@@ -51,7 +50,7 @@ void CreateMnistDataset(vector<vector<double>>* input, vector<vector<double>>* a
 	cout << "\nDATASET LOADED\n\n";
 }
 
-void CreateMnistDataset2D(vector<vector<vector<double>>>* input, vector<vector<double>>* actual, int i)
+void CreateMnistDataset2D(vector<vector<vector<float>>>* input, vector<vector<float>>* actual, int i)
 {
 	if (i > 60000)
 	{
@@ -67,15 +66,15 @@ void CreateMnistDataset2D(vector<vector<vector<double>>>* input, vector<vector<d
 	for (int x = 0; x < i; x++)
 	{
 		vector<unsigned char> temp(28 * 28);
-		vector<vector<double>> sample2D;
+		vector<vector<float>> sample2D;
 		file.read((char*)(temp.data()), 28 * 28);
 
 		for (int i = 0; i < 28; i++)
 		{
-			vector<double> row;
+			vector<float> row;
 			for (int j = 0; j < 28; j++)
 			{
-				row.push_back((double)(temp[i * 28 + j]) / (double)255);
+				row.push_back((float)(temp[i * 28 + j]) / (float)255);
 			}
 			sample2D.push_back(row);
 		}
@@ -93,8 +92,8 @@ void CreateMnistDataset2D(vector<vector<vector<double>>>* input, vector<vector<d
 		vector<unsigned char> temp(1);
 
 		file2.read((char*)(temp.data()), 1);
-		vector<double> label(10);
-		label[(double)temp[0]] = 1;
+		vector<float> label(10);
+		label[(float)temp[0]] = 1;
 
 		actual->push_back(label);
 	}
@@ -109,10 +108,10 @@ Network CreateClassifier()
 	model.AddLayer(Layer(28 * 28, "Input"));
 	model.AddLayer(Layer(10, "Softmax"));
 
-	model.lr = 1e-3;
+	model.lr = 1e-5;
 	model.SetOptimizer("Adam");
 
-	model.Compile("Mini B",1);
+	model.Compile("Mini_Batch",8);
 	model.Summary();
 
 	return model;
@@ -120,16 +119,22 @@ Network CreateClassifier()
 
 int main()
 {
-	vector<vector<double>> input;
-	vector<vector<double>> actual;
-	vector<vector<double>> predictions;
-	CreateMnistDataset(&input, &actual, 5000);
+	
+	vector<vector<float>> input;
+	vector<vector<float>> actual;
+	vector<vector<float>> predictions;
+	CreateMnistDataset(&input, &actual, testdatasize);
 
 	//Training
 	Network model = CreateClassifier();
-	model.Train(&input, &actual, 3, "CCE");
 
-	vector<vector<double>> testdata;
+	cout << "Start Training?: ";
+	char inp;
+	cin >> inp;
+
+	model.Train(&input, &actual, 50, "CCE");
+
+	vector<vector<float>> testdata;
 	for (int i = 0; i < testdatasize; i++)
 	{
 		testdata.push_back(input[i]);
@@ -144,14 +149,14 @@ int main()
 	int counter = 0;
 	for (int i = 0; i < predictions.size(); i++)
 	{
-		double pred = 0;
+		float pred = 0;
 		for (int j = 0; j < 10; j++)
 		{
 			if (predictions[i][j] > predictions[i][pred])
 				pred = j;
 		}
 
-		double act = 0;
+		float act = 0;
 		for (int j = 0; j < 10; j++)
 		{
 			if (actual[i][j] == 1)
@@ -165,5 +170,6 @@ int main()
 			counter++;
 	}
 	
-	cout << "Accuracy: " << counter * 100 / (double)testdatasize;
+	cout << "Accuracy: " << counter * 100 / (float)testdatasize;
+	
 }
